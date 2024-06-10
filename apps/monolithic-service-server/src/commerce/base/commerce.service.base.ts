@@ -87,6 +87,9 @@ export class CommerceServiceBase {
   async GetCommerces(args: string): Promise<string[]> {
     throw new Error("Not implemented");
   }
+  async UpdateCommerceDetails(args: string): Promise<string> {
+    throw new Error("Not implemented");
+  }
   async UpdateCommerceInfo(args: string): Promise<string> {
     throw new Error("Not implemented");
   }

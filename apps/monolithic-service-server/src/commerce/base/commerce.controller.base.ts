@@ -505,6 +505,23 @@ export class CommerceControllerBase {
     return this.service.GetCommerces(body);
   }
 
+  @common.Get("/:id/update-commerce-details")
+  @swagger.ApiOkResponse({
+    type: String,
+  })
+  @swagger.ApiNotFoundResponse({
+    type: errors.NotFoundException,
+  })
+  @swagger.ApiForbiddenResponse({
+    type: errors.ForbiddenException,
+  })
+  async UpdateCommerceDetails(
+    @common.Body()
+    body: string
+  ): Promise<string> {
+    return this.service.UpdateCommerceDetails(body);
+  }
+
   @common.Put("/commerces/:id")
   @swagger.ApiOkResponse({
     type: String,

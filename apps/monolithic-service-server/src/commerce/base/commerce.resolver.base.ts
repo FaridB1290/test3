@@ -240,6 +240,14 @@ export class CommerceResolverBase {
     return this.service.GetCommerces(args);
   }
 
+  @graphql.Query(() => String)
+  async UpdateCommerceDetails(
+    @graphql.Args()
+    args: string
+  ): Promise<string> {
+    return this.service.UpdateCommerceDetails(args);
+  }
+
   @graphql.Mutation(() => String)
   async UpdateCommerceInfo(
     @graphql.Args()
