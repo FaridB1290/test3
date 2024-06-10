@@ -483,7 +483,7 @@ export class CommerceControllerBase {
   })
   async GetCommerceDetails(
     @common.Body()
-    body: string
+    body: CommerceUpdateInput
   ): Promise<string> {
     return this.service.GetCommerceDetails(body);
   }
@@ -500,7 +500,7 @@ export class CommerceControllerBase {
   })
   async GetCommerces(
     @common.Body()
-    body: string
+    body: CommerceUpdateInput
   ): Promise<string[]> {
     return this.service.GetCommerces(body);
   }
@@ -517,7 +517,7 @@ export class CommerceControllerBase {
   })
   async UpdateCommerceDetails(
     @common.Body()
-    body: string
+    body: CommerceUpdateInput
   ): Promise<string> {
     return this.service.UpdateCommerceDetails(body);
   }
@@ -534,8 +534,25 @@ export class CommerceControllerBase {
   })
   async UpdateCommerceInfo(
     @common.Body()
-    body: string
+    body: CommerceUpdateInput
   ): Promise<string> {
     return this.service.UpdateCommerceInfo(body);
+  }
+
+  @common.Put("/commerces/:id")
+  @swagger.ApiOkResponse({
+    type: Commerce,
+  })
+  @swagger.ApiNotFoundResponse({
+    type: errors.NotFoundException,
+  })
+  @swagger.ApiForbiddenResponse({
+    type: errors.ForbiddenException,
+  })
+  async UpdateCommerceInformationDetail(
+    @common.Body()
+    body: CommerceUpdateInput
+  ): Promise<Commerce> {
+    return this.service.UpdateCommerceInformationDetail(body);
   }
 }

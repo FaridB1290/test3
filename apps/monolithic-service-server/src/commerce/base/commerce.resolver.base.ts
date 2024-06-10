@@ -31,6 +31,7 @@ import { Feedback } from "../../feedback/base/Feedback";
 import { PanierMystereFindManyArgs } from "../../panierMystere/base/PanierMystereFindManyArgs";
 import { PanierMystere } from "../../panierMystere/base/PanierMystere";
 import { Utilisateur } from "../../utilisateur/base/Utilisateur";
+import { CommerceUpdateInput } from "./CommerceUpdateInput";
 import { CommerceService } from "../commerce.service";
 @common.UseGuards(GqlDefaultAuthGuard, gqlACGuard.GqlACGuard)
 @graphql.Resolver(() => Commerce)
@@ -254,5 +255,13 @@ export class CommerceResolverBase {
     args: string
   ): Promise<string> {
     return this.service.UpdateCommerceInfo(args);
+  }
+
+  @graphql.Mutation(() => Commerce)
+  async UpdateCommerceInformationDetail(
+    @graphql.Args()
+    args: CommerceUpdateInput
+  ): Promise<Commerce> {
+    return this.service.UpdateCommerceInformationDetail(args);
   }
 }
