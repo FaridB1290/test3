@@ -1,0 +1,242 @@
+[
+  {
+    "role": "user",
+    "resource": "Commerce",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Commerce",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Commerce",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Commerce",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Commerce",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Utilisateur",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Utilisateur",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Utilisateur",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Utilisateur",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Utilisateur",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "PanierMystere",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "PanierMystere",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "PanierMystere",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "PanierMystere",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "PanierMystere",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Feedback",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Feedback",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Feedback",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Feedback",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Feedback",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Vente",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Vente",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Vente",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Vente",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Vente",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Notification",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Notification",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Notification",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Notification",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Notification",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "MethodePaiement",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "MethodePaiement",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "MethodePaiement",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "MethodePaiement",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "MethodePaiement",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "User",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "User",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "User",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "User",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "User",
+    "action": "read:any",
+    "attributes": "*"
+  }
+]
