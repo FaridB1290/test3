@@ -19,6 +19,9 @@ import {
   Utilisateur as PrismaUtilisateur,
 } from "@prisma/client";
 
+import { CommerceUpdateInput } from "./CommerceUpdateInput";
+import { Commerce } from "./Commerce";
+
 export class CommerceServiceBase {
   constructor(protected readonly prisma: PrismaService) {}
 
@@ -91,6 +94,11 @@ export class CommerceServiceBase {
     throw new Error("Not implemented");
   }
   async UpdateCommerceInfo(args: string): Promise<string> {
+    throw new Error("Not implemented");
+  }
+  async UpdateCommerceInformationDetail(
+    args: CommerceUpdateInput
+  ): Promise<Commerce> {
     throw new Error("Not implemented");
   }
 }
