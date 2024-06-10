@@ -1,0 +1,116 @@
+datasource db {
+  provider = "postgresql"
+  url      = env("DB_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Commerce {
+  adresse        String?
+  createdAt      DateTime               @default(now())
+  feedbacks      Feedback[]
+  id             String                 @id @default(cuid())
+  nom            String?
+  nomJuridique   String?
+  numTva         String?
+  panierMysteres PanierMystere[]
+  typeField      EnumCommerceTypeField?
+  updatedAt      DateTime               @updatedAt
+  utilisateur    Utilisateur?           @relation(fields: [utilisateurId], references: [id])
+  utilisateurId  String?
+}
+
+model Utilisateur {
+  commerceItems     Commerce[]
+  confirmationEmail Boolean?
+  createdAt         DateTime       @default(now())
+  email             String?
+  id                String         @id @default(cuid())
+  motDePasse        String?
+  nom               String?
+  notifications     Notification[]
+  telephone         String?
+  updatedAt         DateTime       @updatedAt
+}
+
+model PanierMystere {
+  commerce    Commerce?              @relation(fields: [commerceId], references: [id])
+  commerceId  String?
+  createdAt   DateTime               @default(now())
+  description String?
+  etat        EnumPanierMystereEtat?
+  id          String                 @id @default(cuid())
+  nom         String?
+  prix        Float?
+  updatedAt   DateTime               @updatedAt
+  ventes      Vente[]
+}
+
+model Feedback {
+  clientAdresse String?
+  clientEmail   String?
+  clientNom     String?
+  commerce      Commerce? @relation(fields: [commerceId], references: [id])
+  commerceId    String?
+  createdAt     DateTime  @default(now())
+  date          DateTime?
+  id            String    @id @default(cuid())
+  message       String?
+  updatedAt     DateTime  @updatedAt
+}
+
+model Vente {
+  clientAdresse   String?
+  clientNom       String?
+  createdAt       DateTime       @default(now())
+  date            DateTime?
+  id              String         @id @default(cuid())
+  panierMystere   PanierMystere? @relation(fields: [panierMystereId], references: [id])
+  panierMystereId String?
+  quantite        Int?
+  total           Float?
+  updatedAt       DateTime       @updatedAt
+}
+
+model Notification {
+  createdAt     DateTime     @default(now())
+  date          DateTime?
+  id            String       @id @default(cuid())
+  message       String?
+  updatedAt     DateTime     @updatedAt
+  utilisateur   Utilisateur? @relation(fields: [utilisateurId], references: [id])
+  utilisateurId String?
+}
+
+model MethodePaiement {
+  createdAt DateTime                      @default(now())
+  id        String                        @id @default(cuid())
+  typeField EnumMethodePaiementTypeField?
+  updatedAt DateTime                      @updatedAt
+}
+
+model User {
+  createdAt DateTime @default(now())
+  email     String?  @unique
+  firstName String?
+  id        String   @id @default(cuid())
+  lastName  String?
+  password  String
+  roles     Json
+  updatedAt DateTime @updatedAt
+  username  String   @unique
+}
+
+enum EnumCommerceTypeField {
+  Option1
+}
+
+enum EnumPanierMystereEtat {
+  Option1
+}
+
+enum EnumMethodePaiementTypeField {
+  Option1
+}
