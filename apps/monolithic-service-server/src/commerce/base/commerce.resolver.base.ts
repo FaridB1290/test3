@@ -258,6 +258,14 @@ export class CommerceResolverBase {
   }
 
   @graphql.Mutation(() => Commerce)
+  async UpdateCommerceInformationCorrected(
+    @graphql.Args()
+    args: CommerceUpdateInput
+  ): Promise<Commerce> {
+    return this.service.UpdateCommerceInformationCorrected(args);
+  }
+
+  @graphql.Mutation(() => Commerce)
   async UpdateCommerceInformationDetail(
     @graphql.Args()
     args: CommerceUpdateInput

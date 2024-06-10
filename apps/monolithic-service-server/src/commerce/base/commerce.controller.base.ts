@@ -549,6 +549,23 @@ export class CommerceControllerBase {
   @swagger.ApiForbiddenResponse({
     type: errors.ForbiddenException,
   })
+  async UpdateCommerceInformationCorrected(
+    @common.Body()
+    body: CommerceUpdateInput
+  ): Promise<Commerce> {
+    return this.service.UpdateCommerceInformationCorrected(body);
+  }
+
+  @common.Put("/commerces/:id")
+  @swagger.ApiOkResponse({
+    type: Commerce,
+  })
+  @swagger.ApiNotFoundResponse({
+    type: errors.NotFoundException,
+  })
+  @swagger.ApiForbiddenResponse({
+    type: errors.ForbiddenException,
+  })
   async UpdateCommerceInformationDetail(
     @common.Body()
     body: CommerceUpdateInput
